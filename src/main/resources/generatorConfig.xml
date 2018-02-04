@@ -93,7 +93,7 @@
                enableUpdateByExample="true">
         </table>
         <table schema="live" tableName="itemimage"
-               domainObjectName="itemImage" enableCountByExample="true"
+               domainObjectName="ItemImage" enableCountByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true"
                enableUpdateByExample="true">
         </table>

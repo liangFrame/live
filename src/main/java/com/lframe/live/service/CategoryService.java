@@ -2,13 +2,17 @@ package com.lframe.live.service;
 
 import com.lframe.live.pojo.Category;
 
+import java.util.List;
+
 public interface CategoryService {
 
     void add(Category category);
 
-    Category get(int id);
+    Category get(Integer id);
 
-    void delete(int id);
+    void delete(Integer id);
 
     void update(Category category);
+
+    List<Category> list();
 }

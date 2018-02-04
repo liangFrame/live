@@ -1,30 +1,30 @@
 package com.lframe.live.mapper;
 
-import com.lframe.live.pojo.itemImage;
-import com.lframe.live.pojo.itemImageExample;
+import com.lframe.live.pojo.ItemImage;
+import com.lframe.live.pojo.ItemImageExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface itemImageMapper {
-    int countByExample(itemImageExample example);
+public interface ItemImageMapper {
+    int countByExample(ItemImageExample example);
 
-    int deleteByExample(itemImageExample example);
+    int deleteByExample(ItemImageExample example);
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(itemImage record);
+    int insert(ItemImage record);
 
-    int insertSelective(itemImage record);
+    int insertSelective(ItemImage record);
 
-    List<itemImage> selectByExample(itemImageExample example);
+    List<ItemImage> selectByExample(ItemImageExample example);
 
-    itemImage selectByPrimaryKey(Integer id);
+    ItemImage selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") itemImage record, @Param("example") itemImageExample example);
+    int updateByExampleSelective(@Param("record") ItemImage record, @Param("example") ItemImageExample example);
 
-    int updateByExample(@Param("record") itemImage record, @Param("example") itemImageExample example);
+    int updateByExample(@Param("record") ItemImage record, @Param("example") ItemImageExample example);
 
-    int updateByPrimaryKeySelective(itemImage record);
+    int updateByPrimaryKeySelective(ItemImage record);
 
-    int updateByPrimaryKey(itemImage record);
+    int updateByPrimaryKey(ItemImage record);
 }

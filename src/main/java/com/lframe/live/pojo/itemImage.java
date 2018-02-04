@@ -1,6 +1,6 @@
 package com.lframe.live.pojo;
 
-public class itemImage {
+public class ItemImage {
     private Integer id;
 
     private Integer itid;

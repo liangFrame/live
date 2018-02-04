@@ -21,12 +21,12 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Category get(int id) {
+    public Category get(Integer id) {
         return categoryMapper.selectByPrimaryKey(id);
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
 
     }
 

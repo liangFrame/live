@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lframe.live.mapper.itemImageMapper" >
-  <resultMap id="BaseResultMap" type="com.lframe.live.pojo.itemImage" >
+<mapper namespace="com.lframe.live.mapper.ItemImageMapper" >
+  <resultMap id="BaseResultMap" type="com.lframe.live.pojo.ItemImage" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="itId" property="itid" jdbcType="INTEGER" />
     <result column="type" property="type" jdbcType="VARCHAR" />
@@ -67,7 +67,7 @@
   <sql id="Base_Column_List" >
     id, itId, type
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.lframe.live.pojo.itemImageExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.lframe.live.pojo.ItemImageExample" >
     select
     <if test="distinct" >
       distinct
@@ -91,19 +91,19 @@
     delete from itemimage
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.lframe.live.pojo.itemImageExample" >
+  <delete id="deleteByExample" parameterType="com.lframe.live.pojo.ItemImageExample" >
     delete from itemimage
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lframe.live.pojo.itemImage" >
+  <insert id="insert" parameterType="com.lframe.live.pojo.ItemImage" >
     insert into itemimage (id, itId, type
       )
     values (#{id,jdbcType=INTEGER}, #{itid,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.lframe.live.pojo.itemImage" >
+  <insert id="insertSelective" parameterType="com.lframe.live.pojo.ItemImage" >
     insert into itemimage
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -128,7 +128,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.lframe.live.pojo.itemImageExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.lframe.live.pojo.ItemImageExample" resultType="java.lang.Integer" >
     select count(*) from itemimage
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -160,7 +160,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lframe.live.pojo.itemImage" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.lframe.live.pojo.ItemImage" >
     update itemimage
     <set >
       <if test="itid != null" >
@@ -172,7 +172,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.lframe.live.pojo.itemImage" >
+  <update id="updateByPrimaryKey" parameterType="com.lframe.live.pojo.ItemImage" >
     update itemimage
     set itId = #{itid,jdbcType=INTEGER},
       type = #{type,jdbcType=VARCHAR}

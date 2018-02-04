@@ -3,14 +3,14 @@ package com.lframe.live.pojo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class itemImageExample {
+public class ItemImageExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public itemImageExample() {
+    public ItemImageExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
