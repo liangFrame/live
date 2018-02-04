@@ -1,14 +1,17 @@
-package com.lframe.live.service.serviceImpl;
+package com.lframe.live.serviceimpl;
 
 import com.lframe.live.mapper.CategoryMapper;
 import com.lframe.live.pojo.Category;
+import com.lframe.live.pojo.CategoryExample;
 import com.lframe.live.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author home-pc
- * @create2018 -02 -02 -23:13
+ * @create2018 -02 -04 -18:04
  */
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -18,6 +21,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void add(Category category) {
+        categoryMapper.insert(category);
     }
 
     @Override
@@ -27,11 +31,16 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void delete(Integer id) {
-
+        categoryMapper.deleteByPrimaryKey(id);
     }
 
     @Override
     public void update(Category category) {
+        categoryMapper.updateByPrimaryKeySelective(category);
+    }
 
+    @Override
+    public List<Category> list() {
+        return null;
     }
 }
