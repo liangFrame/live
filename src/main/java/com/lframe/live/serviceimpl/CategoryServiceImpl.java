@@ -41,6 +41,17 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<Category> list() {
-        return null;
+        CategoryExample categoryExample=new CategoryExample();
+        categoryExample.setOrderByClause("id desc");
+        return categoryMapper.selectByExample(categoryExample);
+    }
+
+    @Override
+    public Category get(String nameKeyWord) {
+        CategoryExample categoryExample=new CategoryExample();
+        CategoryExample.Criteria criteria=categoryExample.createCriteria();
+        criteria.andNameEqualTo(nameKeyWord);
+        List<Category> categories=categoryMapper.selectByExample(categoryExample);
+        return categories.get(0);
     }
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ firstMessage }}</p>
+</div>
+
+<div id="app2">
+      <span v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+  </span>
+</div>
+
+<div id="app3">
+    <span v-if="kan">
+        seen如果为true，则能看到。如果为false，则看不到
+    </span>
+</div>
+
+<div id="app4">
+    <ol>
+        <li v-for="study in studys">{{ study.text }}</li>
+    </ol>
+</div>
+
+<div id="app5">
+    <p v-for="name in names">{{ name.neirong }}</p>
+</div>
+
+<div id="app6">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">逆转信息</button>
+</div>
+
+
+<div id="app7">
+    <span>{{ message }}</span>
+    <button v-on:click="test">反转信息</button>
+</div>
+
+<div id="app8">
+<!--使用v-model实现的双向绑定,实现表单输入和应用状态之间的相互转化-->
+    <span>{{ message }}</span>
+    <input type="text" v-model="message">
+</div>
+
+<!--<ol>-->
+    <!--&lt;!&ndash; 创建一个 todo-item 组件的实例 &ndash;&gt;-->
+    <!--<todo-item>fd</todo-item>-->
+<!--</ol>-->
+
+<div id="app9">
+    <ol>
+        <todo-item
+        v-for="item in groceryList"
+        v-bind:todo="item"
+        v-bind:key="item.id">
+        </todo-item>
+    </ol>
+</div>
+
+
+<script src="../js/hello.js"></script>
+</body>
+</html>

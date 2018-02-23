@@ -3,9 +3,15 @@ spring:
     active: dev
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/live
+    url: jdbc:mysql://127.0.0.1:3306/live?characterEncoding=utf-8&useSSL=false
     username: root
     password: admin
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.lframe.live.pojo
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#  path: g:/liangbaobao/liang/log
+#  file: baobao.log
+##  config:         # 日志配置文件的路径
